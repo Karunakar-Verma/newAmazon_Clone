@@ -5,8 +5,11 @@ import GameZone from "./GameZone";
 import { IoMdSearch } from "react-icons/io";
 import ReactCountryFlag from "react-country-flag";
 import { LuShoppingCart } from "react-icons/lu";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const SearchBar = () => {
+  const cartProduct=useSelector((state) => state.cart);
   return (
     <div className="flex bg-[#131921] text-white h-16 w-full items-center justify-between px-4">
       {/* upper section */}
@@ -69,10 +72,13 @@ const SearchBar = () => {
         </div>
 
         <div className="text-center">
+        <Link to='/cart'>
+        <h1 >{cartProduct.length}</h1>
           <div className="text-2xl">
             <LuShoppingCart />
           </div>
-          <h1>Cart</h1>
+        </Link>
+          
         </div>
       </div>
     </div>
