@@ -38,7 +38,7 @@ const Container = () => {
           <p className="text-green-600 font-medium mb-1">${product.price}</p>
           <p className="text-sm text-gray-500 mb-1">Category: {product.category}</p>
           <p className="text-sm text-yellow-600">Rating: {product.rating?.rate} ⭐</p>
-          <button  onClick={() => addToCart(product)} className="mt-3 bg-blue-600 text-white px-4 py-1.5 rounded hover:bg-blue-700 transition">
+          <button  onClick={() => addToCart(product)} className="mt-3 cursor-pointer bg-blue-600 text-white px-4 py-1.5 rounded hover:bg-blue-700 transition">
             Add to Cart
           </button>
         </div>
